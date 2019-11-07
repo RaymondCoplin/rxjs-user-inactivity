@@ -23,8 +23,8 @@ export class AppComponent  {
   ngOnInit() {
     this.userActions$ = combineLatest(
       fromEvent(this.$container.nativeElement, 'mousemove'),
-      this.routes$)
-    .pipe(
+      this.routes$
+    ).pipe(
       map(([mouseMove, route]) => ({ mouseMove, route })),
       switchMap(action => this.counter$.pipe(
         tap(x => { 
