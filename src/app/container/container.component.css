@@ -1,0 +1,23 @@
+a {
+  color: #ffffff;
+}
+
+.container {
+  padding: 10px 0px 0px 10px;
+}
+
+.navbar {
+  background: #c62828;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar a {
+  padding: 15px;
+  text-decoration: none;
+}
+
+.active {
+  background: #ff5f52;
+}

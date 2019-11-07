@@ -1,1 +1,5 @@
 /* Add application styles & imports to this file! */
+html, body {
+  margin: 0;
+  padding: 0;
+}

@@ -14,7 +14,7 @@ export class AppComponent  {
   $container;
 
   userActions$: Observable<any>;
-  counter$ = interval(60000);
+  counter$ = interval(1000);
   routes$ = this.router.events.pipe(filter(x => x instanceof NavigationEnd));
   active$ = new Subject<boolean>();
 
@@ -28,10 +28,11 @@ export class AppComponent  {
       map(([mouseMove, route]) => ({ mouseMove, route })),
       switchMap(action => this.counter$.pipe(
         tap(x => { 
-          if (x === 10) { // En 10 minutos de inactividad desplegara una alerta.
+          if (x === 10) { // En 10 segundos de inactividad desplegara una alerta.
             this.active$.next(false);
             alert('Usuario inactivo');
-            console.log('10 minutos de inactividad.');
+            this.router.navigate(['login']);
+            console.log('10 segundos de inactividad.');
           }
         })
       )),

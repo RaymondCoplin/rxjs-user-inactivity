@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container input, button {
+  margin-top: 2px;
+  border-radius: 5px;
+  padding: 5px;
+  width: 200px;
+  box-sizing: border-box;
+}

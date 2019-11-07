@@ -1,3 +1,11 @@
-p {
+* {
   font-family: Lato;
+  color: #ffffff;
+}
+
+.container {
+  background: #8e0000;
+  height: 200px;
+  border-radius: 10px;
+  border: white dashed 1px;
 }
